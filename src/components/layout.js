@@ -24,7 +24,7 @@ const SiteLogo = () => {
 
 const MyFooter = () => {
   return (
-    <div>
+    <div className="main-footer-wrapper">
       <Container fluid="xl">
         <Row>
           <Col lg={6} xl={3}>
@@ -79,7 +79,7 @@ const Layout = ({ children }) => {
       minBreakpoint="xs"
     >
       <header>
-        <Container fluid="xl">
+        <Container fluid>
           <NavBar>
             <SiteLogo />
           </NavBar>

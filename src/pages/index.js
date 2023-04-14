@@ -1,5 +1,6 @@
 import * as React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "gatsby";
 import "./index.css";
 import Carousel from "../components/carousel";
 import Layout from "../components/layout";
@@ -11,12 +12,36 @@ const PropertyCard = () => {
   return (
     <Container className="property-container">
       <img src={N4HouseImg} alt="house" className="property-img" />
-      <h4>House Image</h4>
+      <Link href="#">
+        <h4>House Image</h4>
+      </Link>
       <p>
         This practical style brings a relaxing, airy and cheerful atmosphere
         indoors. A decent life you deserve.
       </p>
     </Container>
+  );
+};
+
+const GroupTours = ({ groupTitle }) => {
+  return (
+    <div className="group-tour-wrapper">
+      <h2 className="group-tour-title">{groupTitle}</h2>
+      <Row className="group-tour-tours-wrapper">
+        <Col md={6} lg={4}>
+          <PropertyCard />
+        </Col>
+        <Col md={6} lg={4}>
+          <PropertyCard />
+        </Col>
+        <Col md={6} lg={4}>
+          <PropertyCard />
+        </Col>
+        <Col md={6} lg={4}>
+          <PropertyCard />
+        </Col>
+      </Row>
+    </div>
   );
 };
 
@@ -26,21 +51,8 @@ const IndexPage = () => {
       <h1>Realevr Tours</h1>
       <Carousel />
       <div>
-        <h2>Featured Tours</h2>
-        <Row>
-          <Col md={6} lg={3}>
-            <PropertyCard />
-          </Col>
-          <Col md={6} lg={3}>
-            <PropertyCard />
-          </Col>
-          <Col md={6} lg={3}>
-            <PropertyCard />
-          </Col>
-          <Col md={6} lg={3}>
-            <PropertyCard />
-          </Col>
-        </Row>
+        <GroupTours groupTitle={"Latest Tours"} />
+        <GroupTours groupTitle={"Featured Tours"} />
       </div>
     </Layout>
   );

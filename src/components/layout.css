@@ -13,6 +13,18 @@
   width: 45px;
   height: 45px;
 }
+.main-footer-wrapper {
+  background-color: currentColor;
+  padding: 3rem 0;
+}
+.main-footer-wrapper h5,
+.main-footer-wrapper p {
+  color: aliceblue;
+}
+.main-footer-wrapper a {
+  text-decoration: none;
+  color: aliceblue;
+}
 .main-content-wrapper {
-  
+  min-height: 100vh;
 }
