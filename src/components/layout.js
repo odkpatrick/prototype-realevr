@@ -50,12 +50,24 @@ const MyFooter = () => {
           </Col>
           <Col lg={6} xl={3}>
             <h5>Featured Tours</h5>
+            <p>
+              <Link to="/">Furnished Apartments</Link>
+            </p>
+            <p>
+              <Link to="/">Bank Sales</Link>
+            </p>
+            <p>
+              <Link to="/">Individual Sales</Link>
+            </p>
           </Col>
           <Col lg={6} xl={3}>
             <h5>Services</h5>
-            <Link to="/">service 1</Link>
-            <Link to="/">service 2</Link>
-            <Link to="/">service 3</Link>
+            <p>
+              <Link to="/services">Create Virtual Tour</Link>
+            </p>
+            <p>
+              <Link to="/services">Intergration</Link>
+            </p>
           </Col>
         </Row>
         <Row>
@@ -63,8 +75,8 @@ const MyFooter = () => {
             <p>© 2023 All rights reserved, Realevr</p>
           </Col>
           <Col>
-            <Link to="/">Terms of service</Link>
-            <Link to="/">Privacy Policy</Link>
+            <Link to="#">Terms of service</Link>
+            <Link to="#">Privacy Policy</Link>
           </Col>
         </Row>
       </Container>
@@ -79,15 +91,11 @@ const Layout = ({ children }) => {
       minBreakpoint="xs"
     >
       <header>
-        <Container fluid>
-          <NavBar>
-            <SiteLogo />
-          </NavBar>
-        </Container>
+        <NavBar>
+          <SiteLogo />
+        </NavBar>
       </header>
-      <main className="main-content-wrapper">
-        <Container fluid="xl">{children}</Container>
-      </main>
+      <main className="main-content-wrapper">{children}</main>
       <footer>
         <MyFooter />
       </footer>
